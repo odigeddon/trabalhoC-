@@ -1,0 +1,22 @@
+  using System.Text.Json.Serialization;
+
+  namespace BestBurger
+  {
+      internal class PedidoJson
+      {
+          [JsonPropertyName("pedidoId")]
+          public string PedidoId { get; set; } = "";
+
+          [JsonPropertyName("cliente")]
+          public ClienteJson? Cliente { get; set; }
+
+          [JsonPropertyName("total")]
+          public decimal Total { get; set; }
+      }
+
+      internal class ClienteJson
+      {
+          [JsonPropertyName("nome")]
+          public string Nome { get; set; } = "";
+      }
+  }       
